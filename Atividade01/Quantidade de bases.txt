@@ -1,0 +1,4 @@
+Adenina (A): 209
+Citosina (C): 227
+Guanina (G): 201
+Timina (T): 189
