@@ -1,0 +1,44 @@
+# Dicionário de códons para aminoácidos
+codons_para_aminoacidos = {
+    "UUU": "F", "UUC": "F", "UUA": "L", "UUG": "L", 
+    "CUU": "L", "CUC": "L", "CUA": "L", "CUG": "L",
+    "AUU": "I", "AUC": "I", "AUA": "I", "AUG": "M", 
+    "GUU": "V", "GUC": "V", "GUA": "V", "GUG": "V",
+    "UCU": "S", "UCC": "S", "UCA": "S", "UCG": "S",
+    "CCU": "P", "CCC": "P", "CCA": "P", "CCG": "P", 
+    "ACU": "T", "ACC": "T", "ACA": "T", "ACG": "T",
+    "GCU": "A", "GCC": "A", "GCA": "A", "GCG": "A",
+    "UAU": "Y", "UAC": "Y", "UAA": "STOP", "UAG": "STOP", 
+    "CAU": "H", "CAC": "H", "CAA": "Q", "CAG": "Q", 
+    "AAU": "N", "AAC": "N", "AAA": "K", "AAG": "K",
+    "GAU": "D", "GAC": "D", "GAA": "E", "GAG": "E", 
+    "GUU": "V", "GUC": "V", "GUA": "V", "GUG": "V",
+    "UGU": "C", "UGC": "C", "UGA": "STOP", "UGG": "W",
+    "CGU": "R", "CGC": "R", "CGA": "R", "CGG": "R",
+    "AGU": "S", "AGC": "S", "AGA": "R", "AGG": "R", 
+    "GGU": "G", "GGC": "G", "GGA": "G", "GGG": "G"
+}
+
+def traduzir_rna_para_aminoacidos(rna):
+    """
+    Função que traduz uma sequência de RNA para a sequência de aminoácidos
+    """
+    aminoacidos = []
+    
+    # Percorre o RNA em trincas (códons) de 3 nucleotídeos
+    for i in range(0, len(rna), 3):
+        codon = rna[i:i+3]
+        if codon in codons_para_aminoacidos:
+            aminoacidos.append(codons_para_aminoacidos[codon])
+        else:
+            aminoacidos.append("STOP")
+            break  # Se encontrar um códon de parada, termina a tradução
+            
+    return ''.join(aminoacidos)
+
+# Exemplo de sequência de RNA
+sequencia_rna = "UUUAUAGUAGAAGAGGUCCAAGCGGGAACAGAACUGCUAACCCAGCCCCAUCCUGUCCUUACACAAAGAUGCUGCGGUCUUGAUCCACCUCGCUCGGCCACUCGUUCACCCCGUCUAAGUUUGCGCGGAACUAACCAAAAGAUGACAACAAGGCGGGACGAACCCUUUACGCUGUCACUCCAUAAAACAUAGUUUUAAUACCGGGUCUCUCAAAAAAGUAUGCUGGGUGCAUCGUUCCUUGGUUUAGUAGCUCCUCCGUUUCGGGCUCGGAUGAGCCUCGGAAUCCUAAGGGUAAAUGCGAAAGAUCCCACGGAUAAGGUCACUUUAACCUGUUACCCAACCAAGCCGGGCACGCGCGGUCUCCCGGAUGACAUCUC"
+sequencia_aminoacidos = traduzir_rna_para_aminoacidos(sequencia_rna)
+
+print(f"Sequência de RNA: {sequencia_rna}")
+print(f"Sequência de Aminoácidos: {sequencia_aminoacidos}")
