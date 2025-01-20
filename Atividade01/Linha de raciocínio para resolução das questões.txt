@@ -1,0 +1,6 @@
+Para contar as bases eu utilizei o GPT-4, porém, vi que ele não seria o suficiente para toda a atividade, então vi vídeo-aulas sobre 
+Git e Python, para conseguir concluir a atividade 1.
+Após analisar as duas linguagens, vi que Python seria mais adequada para a transcrição e tradução da fita de DNA.
+Utilizei um compilador de Python online para executar os códigos e obter meus resultados.
+Como ainda sou iniciante, pedi para o GPT-4 criar os códigos para mim, cujos eu editei conforme o necessário e obtive minhas respostas
+desejadas.
