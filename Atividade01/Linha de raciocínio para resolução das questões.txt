@@ -4,3 +4,5 @@ Após analisar as duas linguagens, vi que Python seria mais adequada para a tran
 Utilizei um compilador de Python online para executar os códigos e obter meus resultados.
 Como ainda sou iniciante, pedi para o GPT-4 criar os códigos para mim, cujos eu editei conforme o necessário e obtive minhas respostas
 desejadas.
+No início foi bem difícil, já que foi o meu primeiro contato mais profundo com programação, mas, após as aulas e com a 
+ajuda do GPT-4 para os primeiros códigos, eu consegui me adaptar rapidamente à linguagem Python e ao uso do Github.
